@@ -4,13 +4,13 @@ export default class Line {
   constructor(element, data) {
     var ys = data.map(function (d) { return d.y; });
     var margin = {top: 20, right: 20, bottom: 20, left: 40};
-    var width = 960 - margin.left - margin.right;
-    var height = 500 - margin.top - margin.bottom;
+    var width = 500 - margin.left - margin.right;
+    var height = 200 - margin.top - margin.bottom;
     var x = d3.time.scale()
         .domain([data[0].x, data[data.length-1].x])
         .rangeRound([0, width]);
     var y = d3.scale.linear()
-        .domain([0, Math.ceil(Math.max(...ys)/10)*10])
+        .domain([0, 5000])
         .range([height, 0]);
     var line = d3.svg.line()
         .x(function(d) { return x(d.x); })

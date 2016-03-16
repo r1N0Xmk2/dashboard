@@ -8,9 +8,11 @@ export default class Pingtest extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h2>{this.props.title}</h2>
-        <LineChart {...this.props}/>
+      <div className="panel panel-default">
+        <div className="panel-heading">{this.props.title}</div>
+        <div className="panel-body">
+          <LineChart {...this.props}/>
+        </div>
       </div>
     );
   }

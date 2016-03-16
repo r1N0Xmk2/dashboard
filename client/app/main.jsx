@@ -1,4 +1,6 @@
 require('./css/main.css');
+require('bootstrap-webpack!../bootstrap.config.js');
+var $ = require('jquery');
 
 import React from 'react';
 import ReactDOM from 'react-dom';

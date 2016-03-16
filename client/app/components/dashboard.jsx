@@ -37,13 +37,20 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <h1>Dashboard</h1>
-        <p>{this.state.message}</p>
-        {
-          this.state.pingtests.map(function (pingtest, i) {
-            return <Pingtest key={i} {...pingtest} />;
-          }.bind(this))
-        }
+        <header className="navbar navbar-default">
+          <p className="navbar-brand"> Dashboard </p>
+        </header>
+        <div className="container">
+          <h3>{this.state.message}</h3>
+          <div className="row">
+          {
+
+            this.state.pingtests.map(function (pingtest, i) {
+              return <div className="col-sm-6"><Pingtest key={i} {...pingtest} /></div>;
+            }.bind(this))
+          }
+          </div>
+        </div>
       </div>
     );
   }
