@@ -11,7 +11,7 @@ var config = {
       level: process.env.NODE_LOG_LEVEL || 'info'
     }),
     redis: {
-      host: 'localhost',
+      host: process.env.DASHBOARD_REDIS_PORT_6379_TCP_ADDR || 'localhost',
       port: 6379
     },
   },
@@ -23,7 +23,7 @@ var config = {
       level: process.env.NODE_LOG_LEVEL || 'info'
     }),
     redis: {
-      host: 'localhost',
+      host: process.env.DASHBOARD_REDIS_PORT_6379_TCP_ADDR || 'localhost',
       port: 6379
     },
   }
