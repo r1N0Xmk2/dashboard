@@ -10,7 +10,7 @@ export default class Line {
         .domain([data[0].x, data[data.length-1].x])
         .rangeRound([0, width]);
     var y = d3.scale.linear()
-        .domain([0, 5000])
+        .domain([0, Math.min(Math.ceil(Math.max(...ys)/10)*10, 2000)])
         .range([height, 0]);
     var line = d3.svg.line()
         .x(function(d) { return x(d.x); })
