@@ -46,7 +46,7 @@ export default class Dashboard extends React.Component {
           {
 
             this.state.pingtests.map(function (pingtest, i) {
-              return <div className="col-sm-6"><Pingtest key={i} {...pingtest} /></div>;
+              return <div key={i} className="col-sm-6"><Pingtest {...pingtest} /></div>;
             }.bind(this))
           }
           </div>
